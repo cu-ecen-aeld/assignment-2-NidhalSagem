@@ -19,10 +19,10 @@ void test_validate_my_username()
      * config file and my_username() functions are setup properly
      */
      const char* expected = my_username();
-     const char* actual = malloc_username_from_conf_file();
+     char* actual = malloc_username_from_conf_file();
      TEST_ASSERT_EQUAL_STRING_MESSAGE(expected, actual, "Strings should be equal");
-     printf(expected);printf("\n");
-     printf(actual);printf("\n");
+     printf("expected is %s\n",expected);
+     printf("actual   is %s\n",actual);
     
    //TEST_ASSERT_TRUE_MESSAGE(false,"AESD students, please fix me!");
 }
